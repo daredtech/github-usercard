@@ -53,6 +53,8 @@ const followersArray = [];
 </div>
 */
 
+const cards = document.querySelector('.cards');
+
 function createCard(cardData){
   //define the elements
   const card = document.createElement('div');
@@ -66,6 +68,23 @@ function createCard(cardData){
   const cardFollowers = document.createElement('p');
   const cardFollowing = document.createElement('p');
   const cardBio = document.createElement('p');
+
+  //setup the structure
+  cards.appendChild(card);
+  card.appendChild(cardImage);
+  card.appendChild(cardInfo);
+  cardInfo.appendChild(cardName);
+  cardInfo.appendChild(cardUserName);
+  cardInfo.appendChild(cardLocaton);
+  cardInfo.appendChild(cardProfile);
+  cardInfo.appendChild(cardProfileLink);
+  cardInfo.appendChild(cardFollowers);
+  cardInfo.appendChild(cardFollowing);
+  cardInfo.appendChild(cardBio);
+  
+ 
+
+
 
 
 }
