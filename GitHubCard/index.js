@@ -53,7 +53,12 @@ const followersArray = [];
 </div>
 */
 
+
 const cards = document.querySelector('.cards');
+cards.classList.add('cards');
+
+let test = createCard("I AM A TEST");
+cards.appendChild(test);
 
 function createCard(cardData){
   //define the elements
@@ -82,9 +87,18 @@ function createCard(cardData){
   cardInfo.appendChild(cardFollowing);
   cardInfo.appendChild(cardBio);
   
- 
+  //setup the styling
+  card.classList.add('card');
+  cardImage.classList.add('card img');
+  cardName.classList.add('card .name');
+  cardUserName.classList.add('card .username');
 
+// .card p {
+//   font-size: 1.4rem;
+//   margin-bottom: 3px;
+// }
 
+return card;
 
 
 }
