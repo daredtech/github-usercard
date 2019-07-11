@@ -3,8 +3,6 @@
            https://api.github.com/users/<your name>
 */
 
-let dataCollection = null;
-
 //to ask a server for information using axios
 axios.get('https://api.github.com/users/daredtech')
   //if successful
@@ -83,12 +81,13 @@ function createCard(dataCollection){
   cardUserName.classList.add('username');
 
   //set the content
-  console.log("INSIDE FUNCTION", dataCollection.name);
   cardName.textContent = dataCollection.name;
-  // cardName.textContent = "BLAH"
-
-
-
+  cardUserName.textContent = dataCollection.login;
+  cardLocaton.textContent = ("Location: " + dataCollection.location);
+  cardProfileLink.textContent = ("Profile: " + dataCollection.html_url);
+  cardFollowers.textContent = ("Followers: " + dataCollection.followers);
+  cardFollowing.textContent = ("Following: " + dataCollection.following);
+  cardBio.textContent = ("Bio: " + dataCollection.bio);
 
 return card;
 }
