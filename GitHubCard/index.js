@@ -40,13 +40,6 @@ axios.get('https://api.github.com/users/daredtech')
 const cards = document.querySelector('.cards');
 cards.classList.add('cards');
 
-// console.log("OUTSIDE FUNCTION", dataCollection.name);
-
-let test = createCard("I AM A TEST");
-cards.appendChild(test);
-
-
-
 function createCard(dataCollection){
   //define the elements
   const card = document.createElement('div');
@@ -88,6 +81,7 @@ function createCard(dataCollection){
   cardFollowers.textContent = ("Followers: " + dataCollection.followers);
   cardFollowing.textContent = ("Following: " + dataCollection.following);
   cardBio.textContent = ("Bio: " + dataCollection.bio);
+  cardImage.src = (dataCollection.avatar_url);
 
 return card;
 }
