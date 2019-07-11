@@ -2,13 +2,14 @@
            (replacing the palceholder with your Github name):
            https://api.github.com/users/<your name>
 */
+
+
 //to ask a server for information using axios
 axios.get('https://api.github.com/users/daredtech')
   //if successful
-  .then(console.log("I AM WORKING"))
-  //if unsuccessful
-  .catch(console.log("I AM NOT WORKING"))
-
+  .then(data => {console.log("I AM WORKING")})
+  // //if unsuccessful
+  .catch(error => {console.log('I AM NOT WORKING')})
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
@@ -33,7 +34,7 @@ axios.get('https://api.github.com/users/daredtech')
 
 const followersArray = [];
 
-/* Step 3: Create a function that accepts a single object as its only argument,
+/* Step 3: Create a function that accepts a single object as its only argument, 
           Using DOM methods and properties, create a component that will return the following DOM element:
 
 <div class="card">
@@ -50,8 +51,18 @@ const followersArray = [];
     <p>Bio: {users bio}</p>
   </div>
 </div>
-
 */
+
+// function createCard(cardData){
+//   //define the elements
+//   const card = 
+
+// }
+
+
+
+
+
 
 /* List of LS Instructors Github username's: 
   tetondan
