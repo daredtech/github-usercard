@@ -4,6 +4,10 @@
 */
 //to ask a server for information using axios
 axios.get('https://api.github.com/users/daredtech')
+  //if successful
+  .then(console.log("I AM WORKING"))
+  //if unsuccessful
+  .catch(console.log("I AM NOT WORKING"))
 
 
 /* Step 2: Inspect and study the data coming back, this is YOUR 
